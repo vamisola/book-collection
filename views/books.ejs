@@ -1,0 +1,9 @@
+<h1>My Book collection</h1>
+
+<% books.forEach(book => { %>
+    <div>
+        <h3><%= book.bookTitle %></h3>
+        <img src="<%= book.image %>">
+        <h4><%= book.author %></h4>
+    </div>
+<% });%>
