@@ -1,3 +1,5 @@
+<% include partials/header %>
+
 <h1>My Book collection</h1>
 
 <% books.forEach(book => { %>
@@ -7,3 +9,5 @@
         <h4><%= book.author %></h4>
     </div>
 <% });%>
+
+<% include partials/footer %>
