@@ -1,5 +1,5 @@
 <% include partials/header %>
-
+    
     <section id="header" class="jumbotron">
     <header>
         <div class="container">
@@ -12,9 +12,9 @@
     
     <section id="books">
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center justify-content-sm-center">
                 <% books.forEach(book => { %>
-                <div class="col-lg-4 col-sm-6 mb-2">
+                <div class="col-lg-4 col-sm-6 col-sx-6 mb-2">
                     <div class="card-deck">
                     <div class="card" style="width: 18rem;">
                         <img class="card-img-top" src="<%= book.image %>" alt="Card image cap">
