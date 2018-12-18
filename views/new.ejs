@@ -1,0 +1,10 @@
+<% include partials/header %>
+<h1>Add a new Book</h1>
+<form action="/books" method="POST">
+    <input type="text" name="bookTitle" placeholder="Book title">
+    <input type="text" name="author" placeholder="Book Author">
+    <input type="text" name="image" placeholder="Image URL">
+    <button>Submit</button>
+</form>
+
+<% include partials/footer %>

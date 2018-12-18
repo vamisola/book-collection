@@ -42,6 +42,10 @@ app.post("/books", (req, res) => {
     //redirect back to book page
 });
 
+app.get("/books/new", (req, res) => {
+    res.render("new");
+});
+
 app.listen(PORT, process.env.IP, () => {
     console.log("Books corner server has started!!!");
 })
