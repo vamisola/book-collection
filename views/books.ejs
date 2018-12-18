@@ -1,13 +1,45 @@
 <% include partials/header %>
 
-<h1>My Book collection</h1>
-<a href="/books/new">Add new book</a>
-<% books.forEach(book => { %>
-    <div>
-        <h3><%= book.bookTitle %></h3>
-        <img src="<%= book.image %>">
-        <h4><%= book.author %></h4>
-    </div>
-<% });%>
+    <section id="header" class="jumbotron">
+    <header>
+        <div class="container">
+            <h1 class="display-3">My Book collection</h1>
+            <p class="lead">Collection of all the books...</p>
+            <a class="btn btn-primary" href="/books/new">Add new book</a>
+        </div>
+    </header>
+    </section>
+    
+    <section id="books">
+        <div class="container">
+            <div class="row">
+                <% books.forEach(book => { %>
+                <div class="col-lg-4 col-sm-6 mb-2">
+                    <div class="card-deck">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="<%= book.image %>" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%= book.bookTitle %>
+                            </h5>
+                            <p class="card-text">
+                                <h4><%= book.author %></h4>
+                            </p>
+                            <a href="#" class="btn btn-primary">Read description</a>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- <h3><%= book.bookTitle %></h3>
+                    <img src="<%= book.image %>">
+                    <h4><%= book.author %></h4> -->
+                </div>
+                <% });%>
+            </div>
+        </div>
+    </section>
+
 
 <% include partials/footer %>
